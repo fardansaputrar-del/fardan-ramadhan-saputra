@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Siakad | webDev school</title>
+    <title>X PPLG - webDev school</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SMKN 1 ciomas <sup></sup></div>
+                <div class="sidebar-brand-text mx-3">SMKN 1 ciomas <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -64,7 +64,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../Siswa/Siswa.php">Siswa</a>
+                        <a class="collapse-item" href="siswa/Siswa.php">Siswa</a>
                         <a class="collapse-item" href="cards.html">Kelas</a>
                         <a class="collapse-item" href="cards.html">Jurusan</a>
                     </div>
@@ -162,59 +162,28 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Selamat Datang</h1>
-                    <h3>Aplikasi Siakad | Web School</h3>
-                    <br>
-                    
-                    <!-- Begin Page Content -->
+                    <h1 class="h3 mb-4 text-gray-800">TAMBAH DATA SISWA SMKN 1 CIOMAS</h1>
+                      <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <a href="tambahansiswa.php" class="btn btn-primary">Tambah Data</a>
+                    <label for="Nama" class="form-label">Nama</label>
+                        <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                        <div id="nama" class="form-text">
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama Siswa</th>
-                                            <th>NISN</th>
-                                            <th>Email</th>
-                                            <th>Jenis Kelamin</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </thead>
-                                     <tbody>
-                                    <?php
-                                    include '../db.php';
-                                    $i = 1;
-                                    $data = mysqli_query($koneksi, "SELECT * FROM siswa");
-                                    while($d = mysqli_fetch_array($data)){
-                                    ?>
-
-                                        <tr>
-                                            <td><?php echo $i++ ?></td>
-                                            <td><?php echo $d['nama']; ?></td>
-                                            <td><?php echo $d['nisn']; ?></td>
-                                            <td><?php echo $d['email']; ?></td>
-                                            <td><?php echo $d['jk']; ?></td>
-                                            <td>
-                                                <a href="#" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-                                                <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <?php
-                                    }
-                                    ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                       <label for="Nisn" class="form-label">Nisn</label>
+                        <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                        <div id="nama" class="form-text">
+                        </div> 
+                        <label for="email" class="form-label">email</label>
+                        <input type="email" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                        <div id="nama" class="form-text">
                         </div>
-                    </div>
+                        <label for="jenis kelamin" class="form-label">jenis kelamin</label>
+                        <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                        <div id="nama" class="form-text">
+                        </div>
+                        <button class="btn btn-primary">Simpan</button></form> 
+                  
+                  
 
                 </div>
                 <!-- /.container-fluid -->
@@ -251,7 +220,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">Ã—</span>
+                        <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
